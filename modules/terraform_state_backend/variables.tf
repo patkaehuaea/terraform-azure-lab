@@ -1,17 +1,21 @@
-variable "resource_group_name" {
-    "description" = "Name of resource group holding terraform remote state."
+variable "container_name" {
+    "description" = "Container name for Azure storage."
+}
+
+variable "key" {
+    "description" = "Storage key for environment specific terraform state file."
 }
 
 variable "location" {
     "description" = "Azure region for provisioned resources."
 }
 
-variable "storage_account_name" {
-    "description" = "Storage account name for environment specific Terraform state files."
+variable "resource_group_name" {
+    "description" = "Name of resource group holding terraform remote state."
 }
 
-variable "container_name" {
-    "description" = "Container name for Azure storage."
+variable "storage_account_name" {
+    "description" = "Storage account name for environment specific Terraform state files."
 }
 
 variable "teraform_backend_config_file_path" {
@@ -21,4 +25,3 @@ variable "teraform_backend_config_file_path" {
 variable "terraform_backend_config_file_name" {
     "description" = "Name of file created from template that holds remote backend configuration."
 }
-
