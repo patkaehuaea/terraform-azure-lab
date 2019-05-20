@@ -1,13 +1,40 @@
-# Steps
+# terraform-azure-tfstate-backend-example
 
-1. Run `terraform init`
-2. Run `terraform plan`
-3. Run `terraform apply`
+Created as an exercise to:
 
-Note at this point the `terraform.tf` file will be present. In order to leverage the remote backend for Azure, you must
-do the following:
+1. Evaluate usability of `${path.root}/module` and `${path.root}/__environment__` directory structure
+2. Implement mechansim that allows separate state files for each environment
+3. Leverage Azure as a remote-backend for Terraform
+4. Minimize initialization needed to setup remote backed for each environment
 
-1. Run `teraform init --reconfigure`
-2. Answer `yes` when asked to migrate from local to remote
-3. Run `terraform plan`
-4. Run `terraform apply`
+# Usage
+
+## Create Prerequisites
+
+The commands below will setup the prerequisites for the `azurerm` remote-backend. They will also generate the
+`terraform.tf` file from template that is used to initialize the remote-backend.
+
+```
+terraform init
+terraform plan
+terraform apply
+```
+
+## Configure Remote-Backend
+
+You should notice `terraform.tf` in your current working directory. The next set of commands will read the statements in
+`terraform.tf` and configure the remote-backend.
+
+```
+teraform init --reconfigure
+terraform plan
+terraform apply
+```
+
+## Cleanup
+
+Delete the leftover `terraform.tfstate` and `terraform.tfstate.backup` files by running: 
+
+```
+rm terraform.tfstate*
+```
