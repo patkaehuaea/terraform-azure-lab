@@ -18,7 +18,7 @@ variable "storage_account_name" {
     "default" = "sahomedev01"
 }
 
-variable "teraform_backend_config_file_path" {
+variable "terraform_backend_config_file_path" {
     "default" = "../modules/terraform_state_backend/templates/"
 }
 
