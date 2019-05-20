@@ -41,6 +41,7 @@ rm terraform.tfstate*
 
 ## TODO
 
-1. Reduce duplication in `main.tf` file between development and production
-2. Reduce duplication in `variables.tf` file between development and production
-3. Add appropriate license
+1. Fix error on `terraform destroy` since state file part of resources being destroyed
+2. Reduce duplication in `main.tf` file between development and production
+3. Reduce duplication in `variables.tf` file between development and production
+4. Add appropriate license
