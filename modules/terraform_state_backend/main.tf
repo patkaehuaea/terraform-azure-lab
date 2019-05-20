@@ -1,6 +1,5 @@
 locals {
     terraform_backend_config_file = "${format("%s/%s", var.terraform_backend_config_file_path, var.terraform_backend_config_file_name)}"
-
 }
 
 provider "azurerm" {
