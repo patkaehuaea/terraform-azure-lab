@@ -19,7 +19,7 @@ variable "storage_account_name" {
 }
 
 variable "terraform_backend_config_file_path" {
-    "default" = "../modules/terraform_state_backend/templates/"
+    "default" = "."
 }
 
 variable "terraform_backend_config_file_name" {
