@@ -38,3 +38,9 @@ Delete the leftover `terraform.tfstate` and `terraform.tfstate.backup` files by 
 ```
 rm terraform.tfstate*
 ```
+
+## TODO
+
+1. Reduce duplication in `main.tf` file between development and production
+2. Reduce duplication in `variables.tf` file between development and production
+3. Add appropriate license
