@@ -18,7 +18,7 @@ variable "storage_account_name" {
     "description" = "Storage account name for environment specific Terraform state files."
 }
 
-variable "teraform_backend_config_file_path" {
+variable "terraform_backend_config_file_path" {
     "description" = "Directory to write terraform.tf from template."
 }
 
