@@ -17,11 +17,3 @@ variable "resource_group_name" {
 variable "storage_account_name" {
     "default" = "sahomedev01"
 }
-
-variable "terraform_backend_config_file_path" {
-    "default" = "."
-}
-
-variable "terraform_backend_config_file_name" {
-    "default" = "terraform.tf"
-}

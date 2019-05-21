@@ -7,6 +7,7 @@ variable "key" {
 }
 
 variable "location" {
+    "default" = "westus"
     "description" = "Azure region for provisioned resources."
 }
 
@@ -19,9 +20,11 @@ variable "storage_account_name" {
 }
 
 variable "terraform_backend_config_file_path" {
+    "default" = "."
     "description" = "Directory to write terraform.tf from template."
 }
 
 variable "terraform_backend_config_file_name" {
+    "default" = "terraform.tf"
     "description" = "Name of file created from template that holds remote backend configuration."
 }
