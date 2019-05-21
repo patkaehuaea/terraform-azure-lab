@@ -1,6 +1,3 @@
-# Remote backend configuration file
-*terraform.tf*
-
 # Local .terraform directories
 **/.terraform/*
 
