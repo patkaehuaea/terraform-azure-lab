@@ -17,3 +17,11 @@ variable "resource_group_name" {
 variable "storage_account_name" {
     "default" = "sahomedev01"
 }
+
+variable "subnet_name" {
+    "default" = "snhomedev01"
+}
+
+variable "vnet_name" {
+    "default" = "vnhomedev01"
+}
