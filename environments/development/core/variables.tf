@@ -6,6 +6,10 @@ variable "address_space" {
     "default" = ["10.0.0.0/16"]
 }
 
+variable "cert_name" {
+    "default" = "crdevcore01"
+}
+
 variable "location" {
     "default" = "westus"
 }

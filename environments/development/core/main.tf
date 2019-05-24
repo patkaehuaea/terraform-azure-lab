@@ -23,3 +23,9 @@ module "key_vault" {
   resource_group_name = "${var.resource_group_name}"
   source    = "../../../modules/common/storage/key_vault/"
 }
+
+module "certificate" {
+  cert_name = "${var.cert_name}"
+  key_vault_id = "${module.key_vault.key_vault_id}"
+  source    = "../../../modules/common/certificate/"
+}
