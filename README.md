@@ -7,6 +7,55 @@ Created as an exercise to:
 3. Leverage Azure as a remote-backend for Terraform
 4. Minimize initialization needed to setup remote backed for each environment
 
+# Project Structure
+
+```
+terraform-azure-lab/
+├── README.md
+├── environments
+│   └── development
+│       └── core
+│           ├── main.tf
+│           ├── terraform.tfstate
+│           ├── terraform.tfstate.backup
+│           └── variables.tf
+└── modules
+    └── common
+        ├── application_gateway
+        │   ├── main.tf
+        │   ├── output.tf
+        │   └── variables.tf
+        ├── certificate
+        │   ├── main.tf
+        │   ├── output.tf
+        │   └── variables.tf
+        ├── compute
+        │   └── linux_vm
+        │       ├── main.tf
+        │       ├── output.tf
+        │       └── variables.tf
+        ├── network
+        │   └── virtual_network
+        │       ├── main.tf
+        │       ├── output.tf
+        │       └── variables.tf
+        ├── remote_state
+        │   ├── main.tf
+        │   ├── makefile
+        │   ├── templates
+        │   │   └── terraform.tf.tpl
+        │   └── variables.tf
+        ├── resource_group
+        │   ├── main.tf
+        │   ├── output.tf
+        │   └── variables.tf
+        └── storage
+            └── key_vault
+                ├── main.tf
+                ├── output.tf
+                └── variables.tf
+```
+
 # Usage
 
 ## Create Prerequisites
