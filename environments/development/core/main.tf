@@ -16,3 +16,10 @@ module "virtual_network" {
   subnet_name = "${var.subnet_name}"
   vnet_name = "${var.vnet_name}"
 }
+
+module "key_vault" {
+  key_vault_name = "kvdevcore01"
+  location = "${var.location}"
+  resource_group_name = "${var.resource_group_name}"
+  source    = "../../../modules/common/storage/key_vault/"
+}
