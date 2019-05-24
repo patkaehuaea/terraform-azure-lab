@@ -16,8 +16,6 @@ terraform-azure-lab/
 │   └── development
 │       └── core
 │           ├── main.tf
-│           ├── terraform.tfstate
-│           ├── terraform.tfstate.backup
 │           └── variables.tf
 └── modules
     └── common
