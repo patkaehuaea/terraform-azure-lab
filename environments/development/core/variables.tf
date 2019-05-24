@@ -1,3 +1,7 @@
+variable "application_gateway_name" {
+    "default" = "agdevcore01"
+}
+
 variable "address_prefix" {
     "default" = "10.0.0.0/24"
 }
