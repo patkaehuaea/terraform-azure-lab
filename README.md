@@ -1,4 +1,4 @@
-# terraform-azure-tfstate-backend-example
+# terraform-azure-lab
 
 Created as an exercise to:
 
