@@ -1,5 +1,4 @@
-provider "azurerm" {
-}
+provider "azurerm" {}
 
 data "azurerm_client_config" "current" {}
 
@@ -25,8 +24,8 @@ resource "azurerm_application_gateway" "default" {
   }
 
   frontend_ip_configuration {
-    name                 = "feip"
-    subnet_id            = "${var.subnet_id}"
+    name                          = "feip"
+    subnet_id                     = "${var.subnet_id}"
     private_ip_address_allocation = "dynamic"
   }
 
@@ -35,8 +34,8 @@ resource "azurerm_application_gateway" "default" {
   }
 
   ssl_certificate {
-    name = "${var.cert_name}"
-    data = "${var.cert_value}"
+    name     = "${var.cert_name}"
+    data     = "${var.cert_value}"
     password = ""
   }
 
@@ -53,14 +52,14 @@ resource "azurerm_application_gateway" "default" {
     frontend_ip_configuration_name = "feip"
     frontend_port_name             = "feport"
     protocol                       = "https"
-    ssl_certificate_name = "${var.cert_name}"
+    ssl_certificate_name           = "${var.cert_name}"
   }
 
   request_routing_rule {
-    name                        = "rqrt"
-    rule_type                   = "Basic"
-    http_listener_name          = "httplist"
-    backend_address_pool_name   = "beap"
-    backend_http_settings_name  = "behttp"
+    name                       = "rqrt"
+    rule_type                  = "Basic"
+    http_listener_name         = "httplist"
+    backend_address_pool_name  = "beap"
+    backend_http_settings_name = "behttp"
   }
 }

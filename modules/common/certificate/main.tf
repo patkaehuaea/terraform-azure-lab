@@ -1,8 +1,7 @@
-provider "azurerm" {
-}
+provider "azurerm" {}
 
 resource "azurerm_key_vault_certificate" "default" {
-  name     = "${var.cert_name}"
+  name         = "${var.cert_name}"
   key_vault_id = "${var.key_vault_id}"
 
   certificate_policy {
