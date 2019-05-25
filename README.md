@@ -1,4 +1,5 @@
 # terraform-azure-lab
+[![Build Status](https://travis-ci.org/patkaehuaea/terraform-azure-lab.svg?branch=master)](https://travis-ci.org/patkaehuaea/terraform-azure-lab)
 
 Created as an exercise to:
 
