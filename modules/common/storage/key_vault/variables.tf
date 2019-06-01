@@ -3,10 +3,10 @@ variable "key_vault_name" {
 }
 
 variable "location" {
-  "default"     = "westus"
-  "description" = "Azure region for common virtual network."
+  default     = "westus"
+  description = "Azure region for common virtual network."
 }
 
 variable "resource_group_name" {
-  "description" = "Resource group name for common virtual network."
+  description = "Resource group name for common virtual network."
 }
