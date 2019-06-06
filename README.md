@@ -11,7 +11,6 @@ Created as an exercise to:
 # Project Structure
 
 ```
-.
 ├── README.md
 ├── environments
 │   └── development
@@ -35,12 +34,6 @@ Created as an exercise to:
     │   │       ├── main.tf
     │   │       ├── output.tf
     │   │       └── variables.tf
-    │   ├── remote_state
-    │   │   ├── main.tf
-    │   │   ├── makefile
-    │   │   ├── templates
-    │   │   │   └── terraform.tf.tpl
-    │   │   └── variables.tf
     │   ├── resource_group
     │   │   ├── main.tf
     │   │   ├── output.tf
@@ -51,9 +44,15 @@ Created as an exercise to:
     │           ├── output.tf
     │           └── variables.tf
     └── services
-        └── application_gateway
+        ├── application_gateway
+        │   ├── main.tf
+        │   ├── output.tf
+        │   └── variables.tf
+        └── remote_state
             ├── main.tf
-            ├── output.tf
+            ├── makefile
+            ├── templates
+            │   └── terraform.tf.tpl
             └── variables.tf
 ```
 
