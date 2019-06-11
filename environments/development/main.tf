@@ -10,7 +10,7 @@ module "virtual_network" {
   address_space       = "${var.address_space}"
   location            = "${var.location}"
   resource_group_name = "${azurerm_resource_group.rg.name}"
-  source              = "../../modules/base/network/virtual_network/"
+  source              = "../../modules/network/virtual_network/"
   subnet_name         = "${var.subnet_name}"
   vnet_name           = "${var.vnet_name}"
 }
@@ -19,13 +19,13 @@ module "key_vault" {
   key_vault_name      = "kvdevcore01"
   location            = "${var.location}"
   resource_group_name = "${azurerm_resource_group.rg.name}"
-  source              = "../../modules/base/storage/key_vault/"
+  source              = "../../modules/storage/key_vault/"
 }
 
 module "certificate" {
   cert_name    = "${var.cert_name}"
   key_vault_id = "${module.key_vault.key_vault_id}"
-  source       = "../../modules/base/certificate/"
+  source       = "../../modules/certificate/"
 }
 
 data "azurerm_key_vault_secret" "default" {
@@ -39,6 +39,6 @@ module "application_gateway" {
   cert_value               = "${data.azurerm_key_vault_secret.default.value}"
   location                 = "${var.location}"
   resource_group_name      = "${var.resource_group_name}"
-  source                   = "../../modules/services/application_gateway/"
+  source                   = "../../modules/application_gateway/"
   subnet_id                = "${module.virtual_network.subnet_id}"
 }
